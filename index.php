@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> AnneTay - Lista Sintética de UFs </title>
+    <style>
+        body {
+        background-color: #F0FFF0;
+        padding: 48px;
+        }
+
+        td {
+        padding: 8px;
+        text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -444,36 +455,36 @@
     ),
   );
   ?>
-  <h1> <font face="Verdana"> Lista Sintética de todos os Estados brasileiros </font> </h1>
+  <h1> Lista Sintética de todos os Estados brasileiros </h1>
   
    <table>
-        <thead>
-        <?php
-      foreach ($syntheticlist as $keylist => $valuelist) {
-        echo "<tr>";
-        foreach ($valuelist as $key => $value) {
-          echo "<th> $key </th>";
-        }
+        <thead  style="background-color: #F0F8FF">
+            <?php
+            foreach ($syntheticlist as $keylist => $valuelist) {
+            echo "<tr>";
+            foreach ($valuelist as $key => $value) {
+            echo "<th> $key </th>";
+            }
         
-        echo "</tr>";
-        break;
-      }
-      ?>
+            echo "</tr>";
+            break;
+            }
+            ?>
         </thead>
 
         <tbody>
-      <?php
-      foreach ($syntheticlist as $keylist => $valuelist) {
-        echo "<tr>";
-        foreach ($valuelist as $key => $value) {
-          echo $key === "Bandeira" ?
+            <?php
+            foreach ($syntheticlist as $keylist => $valuelist) {
+            echo "<tr>";
+            foreach ($valuelist as $key => $value) {
+            echo $key === "Bandeira" ?
             "<td> <img src=\"$value\" alt=\"\" height=\"48px\" width=\"58px\"> </td>"
             :
             "<td>$value</td>";
-        }
-        echo "</tr>";
-      }
-      ?>
+            }
+            echo "</tr>";
+            }
+            ?>
         </tbody>
     </table>
 </body>
